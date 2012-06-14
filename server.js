@@ -29,6 +29,7 @@ app.get('/deploy', function(request, response) {
 	pusher.trigger(channel, event, data, socket_id, function(err, req, res) {
 	  // do something (this callback is optional)
 	});
+	response.send('Message Sent');
 });
 
 var port = process.env.PORT || 80;
