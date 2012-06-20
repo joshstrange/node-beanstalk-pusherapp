@@ -4,11 +4,11 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-app.get('/', function(request, response) {
+app.all('/', function(request, response) {
   response.send('Nothing to see here, move along.');
 });
 
-app.get('/deploy', function(request, response) {
+app.all('/deploy', function(request, response) {
 	  var pusher = new Pusher({
 	  appId: 'APP_ID',
 	  key: 'KEY',
